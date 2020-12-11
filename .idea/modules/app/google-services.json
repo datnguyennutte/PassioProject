@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "785890979372",
+    "project_id": "passiocoffeeproject",
+    "storage_bucket": "passiocoffeeproject.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:785890979372:android:e2629f8241171455e46b89",
+        "android_client_info": {
+          "package_name": "datnguyen.lab.passioproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "785890979372-f30e55g1s8kveh7rl75lhklu13oa26od.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "datnguyen.lab.passioproject",
+            "certificate_hash": "3e6346992a04461489860316c103a5153793fc05"
+          }
+        },
+        {
+          "client_id": "785890979372-d32sbj6so0ql49kjffduekc9qvd7550k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFa16k4XPsHQQPbftJGvMMuG-8yWhjpss"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "785890979372-d32sbj6so0ql49kjffduekc9qvd7550k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
