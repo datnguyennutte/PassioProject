@@ -2,17 +2,11 @@ package datnguyen.lab.passioproject.adapter;
 
 import android.app.Dialog;
 import android.content.Context;
-import android.util.Log;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -20,9 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.text.DecimalFormat;
-import java.text.NumberFormat;
 import java.util.List;
-import java.util.Locale;
 
 import datnguyen.lab.passioproject.R;
 import datnguyen.lab.passioproject.model.Drink;
@@ -32,7 +24,8 @@ public class RecyclerOrderAdapter extends RecyclerView.Adapter<RecyclerOrderAdap
     List<Drink> drinkList;
     Dialog dialog_add_to_cart;
     int quantity_pr = 1;
-    DecimalFormat decimalFormat = new DecimalFormat("###,###");
+
+    public DecimalFormat decimalFormat = new DecimalFormat("###,###");
 
     public RecyclerOrderAdapter(Context context, List<Drink> drinkList) {
         this.context = context;
@@ -43,6 +36,7 @@ public class RecyclerOrderAdapter extends RecyclerView.Adapter<RecyclerOrderAdap
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v;
+
         v = LayoutInflater.from(context).inflate(R.layout.drink_item, parent, false);
         final MyViewHolder myViewHolder = new MyViewHolder(v);
 
@@ -59,7 +53,11 @@ public class RecyclerOrderAdapter extends RecyclerView.Adapter<RecyclerOrderAdap
         myViewHolder.item_drink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final TextView tv_drink_name_107, tv_price_107, tv_quantity, tv_total_107;
+                final TextView tv_drink_name_107;
+                final TextView tv_price_107;
+                final TextView tv_quantity;
+                final TextView tv_total_107;
+
                 RelativeLayout rlt_add_to_cart;
                 RadioButton rdbM, rdbL;
                 rdbM = dialog_add_to_cart.findViewById(R.id.rdb_m_107);
@@ -78,22 +76,25 @@ public class RecyclerOrderAdapter extends RecyclerView.Adapter<RecyclerOrderAdap
                 tv_quantity = dialog_add_to_cart.findViewById(R.id.tv_count_107);
 
                 tv_quantity.setText("1");
+                tv_total_107.setText(decimalFormat.format(drinkList.get(myViewHolder.getAdapterPosition()).getPrice()));
                 rlt_add_to_cart.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
 
                     }
                 });
+                quantity_pr = 1;
 
                 minus.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        if (Long.parseLong(String.valueOf(tv_quantity.getText())) > 1)
+                        quantity_pr =  Integer.parseInt(String.valueOf(tv_quantity.getText()));
+                        if (quantity_pr > 1)
                             quantity_pr--;
-                        tv_quantity.setText(quantity_pr);
 
-                        Long total = quantity_pr * Long.parseLong(String.valueOf(tv_price_107.getText()));
-                        tv_total_107.setText(decimalFormat.format(total) + "đ");
+                        tv_quantity.setText(String.valueOf(quantity_pr));
+                        int total = Integer.parseInt((String) tv_quantity.getText()) * Integer.parseInt(String.valueOf(drinkList.get(myViewHolder.getAdapterPosition()).getPrice()));
+                        tv_total_107.setText(decimalFormat.format(total));
                     }
                 });
                 plus.setOnClickListener(new View.OnClickListener() {
@@ -101,8 +102,8 @@ public class RecyclerOrderAdapter extends RecyclerView.Adapter<RecyclerOrderAdap
                     public void onClick(View v) {
                         quantity_pr++;
                         tv_quantity.setText(String.valueOf(quantity_pr));
-                        Long total = Long.parseLong((String) tv_quantity.getText()) * Long.parseLong(String.valueOf(drinkList.get(myViewHolder.getAdapterPosition()).getPrice()));
-                        tv_total_107.setText(String.valueOf(total)+"đ");
+                        int total = Integer.parseInt((String) tv_quantity.getText()) * Integer.parseInt(String.valueOf(drinkList.get(myViewHolder.getAdapterPosition()).getPrice()));
+                        tv_total_107.setText(decimalFormat.format(total));
                     }
                 });
 
@@ -115,22 +116,38 @@ public class RecyclerOrderAdapter extends RecyclerView.Adapter<RecyclerOrderAdap
                 rdbL.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Long money = drinkList.get(myViewHolder.getAdapterPosition()).getPrice() + 10000;
-                        tv_price_107.setText(String.valueOf(money)+ "đ");
+                        int count = Integer.parseInt(String.valueOf(tv_quantity.getText()));
+
+                        int price = Integer.parseInt(String.valueOf(drinkList.get(myViewHolder.getAdapterPosition()).getPrice()) + 10000);
+
+                        int money = drinkList.get(myViewHolder.getAdapterPosition()).getPrice() + 10000;
+                        tv_price_107.setText(price);
+                        tv_total_107.setText(decimalFormat.format(money * count));
                     }
                 });
                 rdbM.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        tv_price_107.setText(drinkList.get(myViewHolder.getAdapterPosition()).getPrice() + "đ");
+
+
+                        int count = Integer.parseInt(String.valueOf(tv_quantity.getText()));
+
+                        int price = Integer.parseInt(String.valueOf(drinkList.get(myViewHolder.getAdapterPosition()).getPrice()));
+
+                        int total = Integer.parseInt((String) tv_quantity.getText()) * Integer.parseInt(String.valueOf(drinkList.get(myViewHolder.getAdapterPosition()).getPrice()));
+                        tv_total_107.setText(decimalFormat.format(total));
+
+                        tv_price_107.setText(price);
+                        tv_total_107.setText(decimalFormat.format(price * count));
                     }
                 });
 
                 tv_drink_name_107.setText(drinkList.get(myViewHolder.getAdapterPosition()).getDrinkName());
-                tv_price_107.setText(drinkList.get(myViewHolder.getAdapterPosition()).getPrice() + "đ");
+                tv_price_107.setText(decimalFormat.format(drinkList.get(myViewHolder.getAdapterPosition()).getPrice()));
                 img_drink_107.setImageResource(drinkList.get(myViewHolder.getAdapterPosition()).getUrlImage());
-                dialog_add_to_cart.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
 
+
+                dialog_add_to_cart.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
                 dialog_add_to_cart.show();
 
             }
@@ -143,7 +160,7 @@ public class RecyclerOrderAdapter extends RecyclerView.Adapter<RecyclerOrderAdap
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
         holder.tv_name_drink.setText(drinkList.get(position).getDrinkName());
-        holder.tv_price.setText(decimalFormat.format(drinkList.get(position).getPrice())+"đ");
+        holder.tv_price.setText(decimalFormat.format(drinkList.get(position).getPrice()));
         holder.img_drink.setImageResource(drinkList.get(position).getUrlImage());
     }
 

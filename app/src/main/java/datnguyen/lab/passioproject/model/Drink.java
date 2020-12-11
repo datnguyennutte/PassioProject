@@ -2,10 +2,9 @@ package datnguyen.lab.passioproject.model;
 
 public class Drink {
     private String drinkName;
-    private Long price;
-    private Integer urlImage;
+    private Integer price, urlImage;
 
-    public Drink(String drinkName, Long price, Integer urlImage) {
+    public Drink(String drinkName, int price, Integer urlImage) {
         this.drinkName = drinkName;
         this.price = price;
         this.urlImage = urlImage;
@@ -19,11 +18,11 @@ public class Drink {
         this.drinkName = drinkName;
     }
 
-    public Long getPrice() {
+    public Integer getPrice() {
         return price;
     }
 
-    public void setPrice(Long price) {
+    public void setPrice(int price) {
         this.price = price;
     }
 

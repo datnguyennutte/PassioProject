@@ -31,12 +31,12 @@ public class FreshEasyFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         drinkList = new ArrayList<>();
-        drinkList.add(new Drink("Chanh Tuyết", 29000L, R.drawable.ic_chanh_tuyet));
-        drinkList.add(new Drink("Mojito Tea", 39000L, R.drawable.ic_passio_choco));
-        drinkList.add(new Drink("Pink Lady Iced Tea (L)", 42000L, R.drawable.ic_pinky_sumer));
-        drinkList.add(new Drink("Chanh Tuyết", 29000L, R.drawable.ic_chanh_tuyet));
-        drinkList.add(new Drink("Mojito Tea", 39000L, R.drawable.ic_passio_choco));
-        drinkList.add(new Drink("Pink Lady Iced Tea (L)", 42000L, R.drawable.ic_pinky_sumer));
+        drinkList.add(new Drink("Chanh Tuyết", 29000, R.drawable.ic_chanh_tuyet));
+        drinkList.add(new Drink("Mojito Tea", 39000, R.drawable.ic_passio_choco));
+        drinkList.add(new Drink("Pink Lady Iced Tea (L)", 42000, R.drawable.ic_pinky_sumer));
+        drinkList.add(new Drink("Chanh Tuyết", 29000, R.drawable.ic_chanh_tuyet));
+        drinkList.add(new Drink("Mojito Tea", 39000, R.drawable.ic_passio_choco));
+        drinkList.add(new Drink("Pink Lady Iced Tea (L)", 42000, R.drawable.ic_pinky_sumer));
 
     }
 

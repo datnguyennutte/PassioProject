@@ -33,8 +33,8 @@ public class GreenxmasFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
         drinkList = new ArrayList<>();
-        drinkList.add(new Drink("Choco Xmas (L)", 55000L, R.drawable.ic_choco_xmas));
-        drinkList.add(new Drink("Cookie XMas", 55000L, R.drawable.ic_cooikie_xmas));
+        drinkList.add(new Drink("Choco Xmas (L)", 55000, R.drawable.ic_choco_xmas));
+        drinkList.add(new Drink("Cookie XMas", 55000, R.drawable.ic_cooikie_xmas));
     }
 
     @Override

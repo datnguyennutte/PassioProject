@@ -31,18 +31,18 @@ public class IceBlendedFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
         drinkList = new ArrayList<>();
-        drinkList.add(new Drink("Passiopuchino", 36000L, R.drawable.ic_passiopuccino));
-        drinkList.add(new Drink("Iced Chocolate", 44000L, R.drawable.ic_drink_lady_iced_tea));
-        drinkList.add(new Drink("Matcha Green Tea", 39000L, R.drawable.ic_passiopuccino));
-        drinkList.add(new Drink("Passio Choco", 42000L, R.drawable.ic_passio_choco));
-        drinkList.add(new Drink("Passiopucchino With Caramel", 46000L, R.drawable.ic_passiopuccino));
-        drinkList.add(new Drink("Cookie'n Cream", 36000L, R.drawable.ic_passio_choco));
-        drinkList.add(new Drink("Matcha Green Tea", 39000L, R.drawable.ic_passiopuccino));
-        drinkList.add(new Drink("Passio Choco", 42000L, R.drawable.ic_passio_choco));
-        drinkList.add(new Drink("Passiopucchino With Caramel", 46000L, R.drawable.ic_passiopuccino));
-        drinkList.add(new Drink("Matcha Green Tea", 39000L, R.drawable.ic_passiopuccino));
-        drinkList.add(new Drink("Passio Choco", 42000L, R.drawable.ic_passio_choco));
-        drinkList.add(new Drink("Passiopucchino With Caramel", 46000L, R.drawable.ic_passiopuccino));
+        drinkList.add(new Drink("Passiopuchino", 36000, R.drawable.ic_passiopuccino));
+        drinkList.add(new Drink("Iced Chocolate", 44000, R.drawable.ic_drink_lady_iced_tea));
+        drinkList.add(new Drink("Matcha Green Tea", 39000, R.drawable.ic_passiopuccino));
+        drinkList.add(new Drink("Passio Choco", 42000, R.drawable.ic_passio_choco));
+        drinkList.add(new Drink("Passiopucchino With Caramel", 46000, R.drawable.ic_passiopuccino));
+        drinkList.add(new Drink("Cookie'n Cream", 36000, R.drawable.ic_passio_choco));
+        drinkList.add(new Drink("Matcha Green Tea", 39000, R.drawable.ic_passiopuccino));
+        drinkList.add(new Drink("Passio Choco", 42000, R.drawable.ic_passio_choco));
+        drinkList.add(new Drink("Passiopucchino With Caramel", 46000, R.drawable.ic_passiopuccino));
+        drinkList.add(new Drink("Matcha Green Tea", 39000, R.drawable.ic_passiopuccino));
+        drinkList.add(new Drink("Passio Choco", 42000, R.drawable.ic_passio_choco));
+        drinkList.add(new Drink("Passiopucchino With Caramel", 46000, R.drawable.ic_passiopuccino));
 
     }
 

@@ -30,17 +30,17 @@ public class PassioCoffeeFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         drinkList = new ArrayList<>();
-        drinkList.add(new Drink("Iced Espresso", 25000L, R.drawable.ic_iced_espresso));
-        drinkList.add(new Drink("Iced Americano", 34000L, R.drawable.ic_ice_americano));
-        drinkList.add(new Drink("Iced Americano With Milk", 25000L, R.drawable.ic_ice_americano));
-        drinkList.add(new Drink("Iced Capuchino", 40000L, R.drawable.ic_iced_espresso));
-        drinkList.add(new Drink("Iced Cafe Latte", 40000L, R.drawable.ic_late));
-        drinkList.add(new Drink("Espresso Bạc Xĩu", 25000L, R.drawable.ic_bac_siu));
-        drinkList.add(new Drink("Hot Latte", 35000L, R.drawable.ic_ice_cafe_latte));
-        drinkList.add(new Drink("Hot Americano", 29000L, R.drawable.ic_hot_americano));
-        drinkList.add(new Drink("Espresso Bạc Xĩu", 25000L, R.drawable.ic_bac_siu));
-        drinkList.add(new Drink("Hot Latte", 35000L, R.drawable.ic_ice_cafe_latte));
-        drinkList.add(new Drink("Hot Americano", 29000L, R.drawable.ic_hot_americano));
+        drinkList.add(new Drink("Iced Espresso", 25000, R.drawable.ic_iced_espresso));
+        drinkList.add(new Drink("Iced Americano", 34000, R.drawable.ic_ice_americano));
+        drinkList.add(new Drink("Iced Americano With Milk", 25000, R.drawable.ic_ice_americano));
+        drinkList.add(new Drink("Iced Capuchino", 40000, R.drawable.ic_iced_espresso));
+        drinkList.add(new Drink("Iced Cafe Latte", 40000, R.drawable.ic_late));
+        drinkList.add(new Drink("Espresso Bạc Xĩu", 25000, R.drawable.ic_bac_siu));
+        drinkList.add(new Drink("Hot Latte", 35000, R.drawable.ic_ice_cafe_latte));
+        drinkList.add(new Drink("Hot Americano", 29000, R.drawable.ic_hot_americano));
+        drinkList.add(new Drink("Espresso Bạc Xĩu", 25000, R.drawable.ic_bac_siu));
+        drinkList.add(new Drink("Hot Latte", 35000, R.drawable.ic_ice_cafe_latte));
+        drinkList.add(new Drink("Hot Americano", 29000, R.drawable.ic_hot_americano));
 
     }
 

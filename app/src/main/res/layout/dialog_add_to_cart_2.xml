@@ -53,7 +53,18 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
         android:layout_toRightOf="@+id/img_drink_107"
-        android:text="55.000đ"
+        android:text="55.000"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/d"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_content_drink_107"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/tv_drink_price_107"
+        android:text="đ"
         android:textColor="@color/colorPrimary"
         android:textSize="16sp"
         android:textStyle="bold" />
@@ -104,8 +115,8 @@
 
     <ImageView
         android:id="@+id/img_descrease_107"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:layout_below="@id/div1_107"
         android:layout_marginTop="20dp"
         android:layout_marginRight="10dp"
@@ -128,8 +139,8 @@
 
     <ImageView
         android:id="@+id/img_plus_107"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:layout_below="@id/div1_107"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="20dp"
@@ -159,7 +170,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
-            android:text="55.000đ"
+            android:text="55.000"
+            android:textColor="@color/colorWhite"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/d2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="đ"
+            android:layout_toRightOf="@id/tv_total_price_107"
             android:textColor="@color/colorWhite"
             android:textSize="14sp"
             android:textStyle="bold" />

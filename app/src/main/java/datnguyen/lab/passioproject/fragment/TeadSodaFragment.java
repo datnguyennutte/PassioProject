@@ -31,8 +31,8 @@ public class TeadSodaFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         drinkList = new ArrayList<>();
-        drinkList.add(new Drink("Ananas Tea", 39000L, R.drawable.ic_ananas_tea));
-        drinkList.add(new Drink("Pinky Summer", 42000L, R.drawable.ic_pinky_sumer));
+        drinkList.add(new Drink("Ananas Tea", 39000, R.drawable.ic_ananas_tea));
+        drinkList.add(new Drink("Pinky Summer", 42000, R.drawable.ic_pinky_sumer));
     }
 
     @Override
