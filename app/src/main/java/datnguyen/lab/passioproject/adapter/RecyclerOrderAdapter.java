@@ -88,7 +88,7 @@ public class RecyclerOrderAdapter extends RecyclerView.Adapter<RecyclerOrderAdap
                 minus.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        quantity_pr =  Integer.parseInt(String.valueOf(tv_quantity.getText()));
+                        quantity_pr = Integer.parseInt(String.valueOf(tv_quantity.getText()));
                         if (quantity_pr > 1)
                             quantity_pr--;
 
@@ -118,27 +118,25 @@ public class RecyclerOrderAdapter extends RecyclerView.Adapter<RecyclerOrderAdap
                     public void onClick(View v) {
                         int count = Integer.parseInt(String.valueOf(tv_quantity.getText()));
 
-                        int price = Integer.parseInt(String.valueOf(drinkList.get(myViewHolder.getAdapterPosition()).getPrice()) + 10000);
+                        int price = Integer.parseInt(String.valueOf(drinkList.get(myViewHolder.getAdapterPosition()).getPrice())) + 10000;
 
                         int money = drinkList.get(myViewHolder.getAdapterPosition()).getPrice() + 10000;
-                        tv_price_107.setText(price);
+                        tv_price_107.setText(decimalFormat.format(price));
                         tv_total_107.setText(decimalFormat.format(money * count));
+                        notifyDataSetChanged();
                     }
                 });
                 rdbM.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-
-
                         int count = Integer.parseInt(String.valueOf(tv_quantity.getText()));
 
                         int price = Integer.parseInt(String.valueOf(drinkList.get(myViewHolder.getAdapterPosition()).getPrice()));
 
-                        int total = Integer.parseInt((String) tv_quantity.getText()) * Integer.parseInt(String.valueOf(drinkList.get(myViewHolder.getAdapterPosition()).getPrice()));
+                        int total = count * Integer.parseInt(String.valueOf(drinkList.get(myViewHolder.getAdapterPosition()).getPrice()));
                         tv_total_107.setText(decimalFormat.format(total));
-
-                        tv_price_107.setText(price);
-                        tv_total_107.setText(decimalFormat.format(price * count));
+                        tv_price_107.setText(decimalFormat.format(price));
+                        notifyDataSetChanged();
                     }
                 });
 
