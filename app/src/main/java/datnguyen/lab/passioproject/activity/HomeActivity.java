@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -27,6 +28,7 @@ public class HomeActivity extends AppCompatActivity {
     NewsAdapter newsAdapter;
     ImageView img_noti_107, img_gift_107, img_getlocation_107;
     FloatingActionButton order;
+    LinearLayout layout_coupon;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +38,13 @@ public class HomeActivity extends AppCompatActivity {
         img_gift_107 = findViewById(R.id.img_gift_107);
         img_noti_107 = findViewById(R.id.img_notif_107);
         order = findViewById(R.id.flt_order_107);
+        layout_coupon = findViewById(R.id.layout_coupon_107);
+        layout_coupon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeActivity.this, MemberActivity.class));
+            }
+        });
         order.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

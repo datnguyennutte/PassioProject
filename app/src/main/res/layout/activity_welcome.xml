@@ -40,7 +40,7 @@
         android:layout_marginRight="20dp"
         android:background="@drawable/custom_add_to_cart_bg"
         android:backgroundTint="#3B579D"
-        android:text="Đăng nhập bằng số điện thoại"
+        android:text="Đăng nhập bằng Facebook"
         android:textColor="@color/colorWhite"
         android:textAllCaps="true"
         android:layout_marginBottom="40dp"

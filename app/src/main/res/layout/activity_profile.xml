@@ -34,7 +34,7 @@
                 android:layout_height="100dp"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="30dp"
-                android:src="@drawable/ic_avatar_holder" />
+                android:src="@drawable/ic_avatar_me" />
 
             <TextView
                 android:id="@+id/tv_full_name_107"

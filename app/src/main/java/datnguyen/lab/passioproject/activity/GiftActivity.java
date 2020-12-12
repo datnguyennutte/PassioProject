@@ -26,7 +26,7 @@ public class GiftActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        Intent i=new Intent(Intent.ACTION_MAIN);
+        Intent i = new Intent(Intent.ACTION_MAIN);
         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         finish();
@@ -47,12 +47,12 @@ public class GiftActivity extends AppCompatActivity {
         paperAdapter.AddFragment(new ExpiredFragment(), "Đã hết hạn");
         tabLayout_107.setupWithViewPager(viewPager_107);
         viewPager_107.setAdapter(paperAdapter);
-        img_back_home_107 =findViewById(R.id.img_back_107);
+        img_back_home_107 = findViewById(R.id.img_back_107);
 
 
     }
 
     public void back_homepage(View view) {
-        startActivity(new Intent(GiftActivity.this, HomeActivity.class));
+        GiftActivity.super.onBackPressed();
     }
 }
