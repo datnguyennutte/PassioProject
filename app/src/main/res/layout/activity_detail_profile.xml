@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fafafa"
+    android:orientation="vertical"
+    android:scrollbarAlwaysDrawHorizontalTrack="false"
+    android:scrollbars="none"
+    tools:context=".activity.DetailProfileActivity">
+
+    <LinearLayout
+        android:background="#fafafa"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:background="@color/colorWhite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+            <ImageView
+                android:id="@+id/img_back_home_107"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:onClick="back_homepage"
+                android:src="@drawable/ic_button_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:text="Coupon của tôi"
+                android:textAllCaps="false"
+                android:textColor="@color/colorBlack"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:background="#fafafa">
+
+            <ImageView
+                android:id="@+id/profile_avatar"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_avatar_me" />
+
+            <ImageView
+                android:id="@+id/profile_edit_avatar"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/profile_avatar"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="-25dp"
+                android:layout_marginTop="-25dp"
+                android:layout_toRightOf="@id/profile_avatar"
+                android:src="@drawable/ic_edit" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/rad_backcround_profile"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tv_full_name_107"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:text="Họ và tên"
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/edt_input_name_107"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_full_name_107"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:background="#00000000"
+                android:hint="Nhập tên"
+                android:textColorHint="@android:color/darker_gray" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rad_backcround_profile"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tv_phone_107"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:text="Số điện thoại"
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/edt_phone_107"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_phone_107"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:background="#00000000"
+                android:editable="false"
+                android:text="+84344976831"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@android:color/darker_gray" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rad_backcround_profile"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tv_DOB_107"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:text="Ngày sinh"
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/edt_DOB_107"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_DOB_107"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:background="#00000000"
+                android:hint="Nhập ngày sinh"
+                android:textColorHint="@android:color/darker_gray" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rad_backcround_profile"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tv_gender_107"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:text="Giới tính"
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/rdb_male_107"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_gender_107"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:buttonTint="@color/colorPrimary"
+                android:checked="true"
+                android:text="Nam"
+                android:textColorHint="@android:color/darker_gray" />
+
+            <RadioButton
+                android:id="@+id/rdb_female_107"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rdb_male_107"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:buttonTint="@color/colorPrimary"
+                android:text="Nữ"
+                android:textColorHint="@android:color/darker_gray" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rad_backcround_profile"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tv_mail_107"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:text="Mail"
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/edt_mail_107"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_mail_107"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:background="#00000000"
+                android:hint="Nhập địa chỉ mail"
+                android:textColorHint="@android:color/darker_gray" />
+
+
+        </RelativeLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/custom_add_to_cart_bg"
+            android:backgroundTint="#3B579D"
+            android:text="KẾT NỐI VỚI FACECBOOK"
+            android:textColor="@color/colorWhite" />
+    </LinearLayout>
+</ScrollView>
